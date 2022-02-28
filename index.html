@@ -10,11 +10,12 @@
 
 </head>
 <body>
-    <h1 class="text-center mt-4">Search Your Phone</h1>
+    <h1 class="text-center mt-4">Welcome to Phone World</h1>
+    <h3 class="text-center mt-4">Search Your Phone</h3>
     <!-- input id and button calling -->
     <div class="input-group mb-3 w-50 mx-auto mt-3">
         <input id="search-feild" type="text" class="form-control" placeholder="Search your phone" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button onclick="" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        <button onclick="searchPhone()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
     </div>
 
     <!-- Specific single phone result -->
@@ -23,8 +24,8 @@
     </div>
 
     <!-- total search result -->
-    <div>
-
+    <div id="phonesDisplay" class="row row-cols-1 row-cols-lg-3 g-4">
+        
     </div>
     
 <!-- javascript connected -->
