@@ -12,19 +12,19 @@ const searchPhone = () => {
     .then(data => displayPhones(data.data))
 }
 
-// // another code
+// // showing result code
     const displayPhones = (phones) => {
         const fieldSet = document.getElementById("phonesDisplay");
         fieldSet.textContent = "";
         const x = phones[0];
 // error case
         if (x == undefined) {
+            const error = document.getElementById('error')
             const div = document.createElement('div');
-            div.classList.add('col');
-            div.classList.add('text-center');
+            error.textContent = ''
             div.innerHTML = `
-            <p class ="text-amber-50 text-3xl">Not found</p>`
-            fieldSet.appendChild(div);
+            <p class ="text-amber-50 text-3xl">There is no phone under this name, please search valid phone name or brand name</p>`
+            error.appendChild(div);
             const displayDetail = document.getElementById('singleDetails');
             displayDetail.textContent = '';
         }
@@ -49,6 +49,8 @@ const searchPhone = () => {
     fieldSet.appendChild(div)
     const displayDetail = document.getElementById('singleDetails');
     displayDetail.textContent = '';
+    const error = document.getElementById('error')
+            error.textContent = '';
     })
     }
     }
