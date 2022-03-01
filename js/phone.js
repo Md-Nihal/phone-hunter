@@ -19,11 +19,12 @@ const searchPhone = () => {
         const x = phones[0];
 // error case
         if (x == undefined) {
+            // error setting
             const error = document.getElementById('error')
             const div = document.createElement('div');
             error.textContent = ''
             div.innerHTML = `
-            <p class ="text-amber-50 text-3xl">There is no phone under this name, please search valid phone name or brand name</p>`
+            <p class ="text-amber-50 text-3xl">There is no phone under this name, please search valid phone name or brand name.</p>`
             error.appendChild(div);
             const displayDetail = document.getElementById('singleDetails');
             displayDetail.textContent = '';
